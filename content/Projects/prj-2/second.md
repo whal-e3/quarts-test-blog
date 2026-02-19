@@ -1,16 +1,13 @@
 ---
-title: haslfjhlafd
-description: "A short write-up on tooling, lessons learned, and next steps."
+title: second hello
+description: A short write-up on tooling, lessons learned, and next steps.
 comments: true
-
 publish: true
 draft: false
-
 tags:
   - pwn
   - reversing
   - obsidian
-
 created: 2026-02-10
 modified: 2026-02-18
 published: 2026-02-19
@@ -32,7 +29,7 @@ The goal was to pivot the stack into `.data`, leak `puts@libc`, calculate `syste
 ## 1. First Attempt — Stack Pivot to `.data`
 
 The vulnerable function:
-
+![[스크린샷 2026-02-16 063217.png]]
 ```asm
 push 0x30
 lea eax, [ebp+buf]
